@@ -193,7 +193,7 @@ for k=1:nb_pts
         
     for jj=1:size(sheetNames,2)        
         tableIn=table2array(readtable(strcat(inputRoot,num2str(k),'.xlsx'),...
-            'Sheet',sheetNames{jj},'Range',sheetRanges{jj}));
+            'Sheet',sheetNames{jj},'Range',sheetRanges{jj},'ReadVariableNames',0));
         tempTable(:,tableSlots(jj,1):tableSlots(jj,2))=tableIn;
     end
 
